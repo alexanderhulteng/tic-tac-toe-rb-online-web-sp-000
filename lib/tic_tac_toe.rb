@@ -79,7 +79,7 @@ end
 
 def draw?(board)
   full?(board) && !won?(board)
-  
+
 end
 
 def over?(board)
@@ -101,7 +101,7 @@ def play(board)
   turn_count = 0
   while turn_count < 9 && !over?(board)
 
-    
+
 
     turn(board)
     turn_count+=1
