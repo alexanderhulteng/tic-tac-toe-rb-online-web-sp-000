@@ -94,7 +94,15 @@ end
 def play(board)
   turn_count = 0
   while turn_count < 9 && !over?(board)
+
+    if winner(board) == "X"
+      puts "Congratulations X!"
+    elsif winner(board) == "O"
+      puts "Congratulations X!"
+    end
+      
     turn(board)
     turn_count+=1
+    
   end
 end
