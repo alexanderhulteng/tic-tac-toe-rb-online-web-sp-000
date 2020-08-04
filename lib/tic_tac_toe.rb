@@ -79,7 +79,6 @@ end
 
 def draw?(board)
   full?(board) && !won?(board)
-
 end
 
 def over?(board)
@@ -97,6 +96,8 @@ def play(board)
   while turn_count < 9 && !over?(board)
     turn(board)
     turn_count+=1
+    draw?(board)
+
   end
   if winner(board) == "X"
     puts "Congratulations X!"
