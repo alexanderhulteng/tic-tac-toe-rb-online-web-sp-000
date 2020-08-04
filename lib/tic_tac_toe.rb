@@ -100,9 +100,9 @@ def play(board)
     elsif winner(board) == "O"
       puts "Congratulations X!"
     end
-      
+
     turn(board)
     turn_count+=1
-    
+
   end
 end
