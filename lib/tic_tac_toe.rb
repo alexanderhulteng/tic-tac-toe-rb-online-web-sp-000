@@ -79,10 +79,16 @@ end
 
 def draw?(board)
   full?(board) && !won?(board)
+  
 end
 
 def over?(board)
   won?(board) || full?(board)
+  if winner(board) == "X"
+    puts "Congratulations X!"
+  elsif winner(board) == "O"
+    puts "Congratulations X!"
+  end
 end
 
 def winner(board)
@@ -95,11 +101,7 @@ def play(board)
   turn_count = 0
   while turn_count < 9 && !over?(board)
 
-    if winner(board) == "X"
-      puts "Congratulations X!"
-    elsif winner(board) == "O"
-      puts "Congratulations X!"
-    end
+    
 
     turn(board)
     turn_count+=1
